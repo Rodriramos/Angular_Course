@@ -1,0 +1,10 @@
+<h1> Counter: {{ counter }} </h1>
+<hr/>
+<button (click)="increasedBy(1)">+1</button>
+<button (click)="increasedBy(-1)">-1</button>
+<button (click)="resetCounter()">Reset</button>
+<hr>
+<h1> Counter Signal: {{ counterSignal() }} </h1>
+<button (click)="increasedCounterSignalBy(1)">+1</button>
+<button (click)="increasedCounterSignalBy(-1)">-1</button>
+<button (click)="resetCounterSignal()">Reset</button>
