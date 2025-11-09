@@ -1,0 +1,12 @@
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import type { Character } from '../../../interfaces/character.interface';
+
+@Component({
+  selector: 'dragonball-character-list',
+  templateUrl: './character-list.html',
+  styleUrl: './character-list.css',
+})
+export class CharacterList {
+  characters = input.required<Character[]>();
+
+}
