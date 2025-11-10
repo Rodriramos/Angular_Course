@@ -1,14 +1,5 @@
 <div class="gallery-grid">
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
-  <gifs-list-item></gifs-list-item>
+  @for (gif of gifs(); track gif) {
+    <gifs-list-item [imageUrl]="gif"></gifs-list-item>
+  }
 </div>
