@@ -17,7 +17,8 @@
   padding: 0.75rem 0.5rem;
   border-bottom: 1px solid #334155;
   text-decoration: none;
-  background-color: transparent; /* por defecto */
+  background-color: transparent;
+  /* por defecto */
   transition: background-color 150ms linear;
 }
 
@@ -31,7 +32,8 @@
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.25rem;
-  color: #cbd5e1; /* gris claro */
+  color: #cbd5e1;
+  /* gris claro */
 }
 
 /* Texto secundario */
@@ -50,15 +52,19 @@
 /* Íconos */
 .menu-link i {
   color: #cbd5e1;
+  margin-right: 0;
+  padding-right: 1rem;
 }
 
 /* Enlace activo */
 .active-link {
-  background-color: #1e40af; /* azul activo */
+  background-color: #1e40af;
+  width: calc(100% - 4rem);
 }
 
 .active-link i,
 .active-link .flex-col span:first-child,
 .active-link .flex-col span:last-child {
-  color: white; /* texto e íconos blancos */
+  color: white;
+  /* texto e íconos blancos */
 }
