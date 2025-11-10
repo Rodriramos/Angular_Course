@@ -4,32 +4,14 @@
 <section class="row">
 
   <div class="col-12 col-sm-6">
-    <h3>Agregar {{name()}} </h3>
-    <input 
-      type="text" 
-      class="form-control" 
-      placeholder="Nombre"
-      [value]="name()"
-      (input)="name.set( txtName.value )"
-      #txtName
-    />
-    
-    <h3> {{power()}} </h3>
-    <input 
-      type="number" 
-      class="form-control mt-2" 
-      placeholder="Poder"
-      [value]="power()"
-      (input)="power.set(+txtPower.value)"
-      #txtPower
-    />
-
-    <button (click)="addCharacter(name(), power())" class="mt-2 btn btn-primary">Agregar</button>
+    <dragonball-character-add></dragonball-character-add>
   </div>
 
   
   <div class="col-12 col-sm-6">
-    <dragonball-character-list [characters]="characters()"></dragonball-character-list>
+    <dragonball-character-list 
+    listName="Lista de personajes"
+    [characters]="characters()"></dragonball-character-list>
   </div>
 
 </section>
