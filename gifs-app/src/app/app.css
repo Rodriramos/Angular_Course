@@ -1,0 +1,201 @@
+/* Estilos generales */
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box
+}
+
+body {
+  background-color: #f1f5f9;
+  /* slate-100 */
+  color: #cbd5e1;
+  /* slate-300 */
+  font-smooth: always;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+::selection {
+  background-color: #2563eb;
+  /* blue-600 */
+  color: white;
+}
+
+/* Contenedor principal */
+.main-container {
+
+  margin-left: 16rem;
+  /* 256px */
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+/* Menú lateral */
+#menu {
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  /* 256px */
+  height: 100vh;
+  background-color: #111827;
+  /* gray-900 */
+  color: #cbd5e1;
+  overflow-y: auto;
+  z-index: 10;
+
+
+}
+
+/* Logo */
+#logo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#logo h1 {
+  font-size: 1.125rem;
+  /* text-lg */
+  font-weight: bold;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #logo h1 {
+    font-size: 1.5rem;
+    /* text-2xl */
+  }
+}
+
+#logo h1 span {
+  color: #3b82f6;
+  /* blue-500 */
+}
+
+#logo p {
+  color: #64748b;
+  /* slate-500 */
+  font-size: 0.875rem;
+  /* text-sm */
+}
+
+/* Perfil */
+#profile {
+  padding: 2.5rem 1.5rem;
+  /* py-10 px-6 */
+}
+
+#profile p {
+  color: #64748b;
+  /* slate-500 */
+}
+
+#profile a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* space-x-2 */
+  text-decoration: none;
+}
+
+#profile img {
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+}
+
+#profile span:last-child {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #profile span:last-child {
+    font-size: 1rem;
+  }
+}
+
+#nav {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Estilos comunes para cada enlace del menú */
+#nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* space-x-2 */
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  /* py-3 px-2 */
+  border-bottom: 1px solid #334155;
+  /* slate-700 */
+  background-color: #1e40af;
+  /* blue-800 para el primero */
+  transition: background-color 150ms linear;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  /* hover:bg-white/5 */
+}
+
+/* SVG iconos */
+#nav svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+/* Texto principal del enlace */
+#nav a .flex-col span:first-child {
+  font-size: 1.125rem;
+  /* text-lg */
+  font-weight: bold;
+  line-height: 1.25rem;
+  /* leading-5 */
+  color: white;
+}
+
+/* Texto secundario del enlace */
+#nav a .flex-col span:last-child {
+  font-size: 0.875rem;
+  /* text-sm */
+  color: rgba(255, 255, 255, 0.5);
+  /* text-white/50 o slate-500 */
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #nav a .flex-col span:last-child {
+    display: block;
+  }
+}
+
+/* Estilos específicos para enlaces que no tienen fondo azul */
+#nav a:not(:first-child) {
+  background-color: transparent;
+}
+
+#nav a:not(:first-child) .flex-col span:first-child {
+  color: #cbd5e1;
+  /* slate-300 */
+}
+
+#nav a:not(:first-child) .flex-col span:last-child {
+  color: #64748b;
+  /* slate-500 */
+}
