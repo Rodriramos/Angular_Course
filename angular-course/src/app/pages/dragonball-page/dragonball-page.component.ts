@@ -1,12 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
 import { CharacterList } from "../../components/dragonball/character-list/character-list";
 import { CharacterAdd } from '../../components/dragonball/character-add/character-add';
-
-interface Character {
-  id: number,
-  name: string,
-  power: number
-}
+import type { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-dragonball-page.component',
@@ -25,17 +20,8 @@ export class DragonBallPageComponent {
     {id: 4, name: 'Yamcha', power: 500}
   ])
 
-  addCharacter(name: string, power: number) {
-    if (!name || !power || power <= 0) {
-      return;
-    }
-    const newCharacter:Character = {
-      id: this.characters().length + 1,
-      name: name,
-      power: power
-    }
-    this.characters.update((list) => [... list, newCharacter]);
-    this.resetFields();
+  addCharacter(newCharacter: Character) {
+    this.characters.update(characters => [...characters, newCharacter]);
   }
 
   resetFields() {
