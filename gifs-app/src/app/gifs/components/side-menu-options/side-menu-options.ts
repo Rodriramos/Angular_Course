@@ -1,10 +1,34 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from "@angular/router";
+
+interface GifsSideMenuOptionsInterface {
+  label: string;
+  subLabel: string;
+  router: string;
+  icon: string;
+}
 
 @Component({
   selector: 'gifs-side-menu-options',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './side-menu-options.html',
   styleUrl: './side-menu-options.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GifsSideMenuOptions { }
+export class GifsSideMenuOptions {
+
+  menuOptions: GifsSideMenuOptionsInterface[] = [
+    {
+      icon: 'fa-solid fa-arrow-trend-up',
+      label: 'Trending',
+      subLabel: 'Popular GIFs',
+      router: '/dashboard/trending',
+    },
+    {
+      icon: 'fa-solid fa-magnifying-glass',
+      label: 'Searcher',
+      subLabel: 'Search GIFs',
+      router: '/dashboard/search',
+    }
+  ];
+}

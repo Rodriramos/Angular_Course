@@ -8,71 +8,57 @@
   padding-right: 1.5rem;
 }
 
-/* Estilos comunes para cada enlace del menú */
-#nav a {
+/* Estilo base para enlaces */
+.menu-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  /* space-x-2 */
   width: 100%;
   padding: 0.75rem 0.5rem;
-  /* py-3 px-2 */
   border-bottom: 1px solid #334155;
-  /* slate-700 */
-  background-color: #1e40af;
-  /* blue-800 para el primero */
-  transition: background-color 150ms linear;
   text-decoration: none;
+  background-color: transparent; /* por defecto */
+  transition: background-color 150ms linear;
 }
 
-#nav a:hover {
+/* Hover */
+.menu-link:hover {
   background-color: rgba(255, 255, 255, 0.05);
-  /* hover:bg-white/5 */
 }
 
-/* SVG iconos */
-#nav svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: white;
-}
-
-/* Texto principal del enlace */
-#nav a .flex-col span:first-child {
+/* Texto principal */
+.menu-link .flex-col span:first-child {
   font-size: 1.125rem;
-  /* text-lg */
   font-weight: bold;
   line-height: 1.25rem;
-  /* leading-5 */
-  color: white;
+  color: #cbd5e1; /* gris claro */
 }
 
-/* Texto secundario del enlace */
-#nav a .flex-col span:last-child {
+/* Texto secundario */
+.menu-link .flex-col span:last-child {
   font-size: 0.875rem;
-  /* text-sm */
-  color: rgba(255, 255, 255, 0.5);
-  /* text-white/50 o slate-500 */
+  color: #64748b;
   display: none;
 }
 
 @media (min-width: 768px) {
-  #nav a .flex-col span:last-child {
+  .menu-link .flex-col span:last-child {
     display: block;
   }
 }
 
-/* Estilos específicos para enlaces que no tienen fondo azul */
-#nav a:not(:first-child) {
-  background-color: transparent;
-}
-
-#nav a:not(:first-child) .flex-col span:first-child {
+/* Íconos */
+.menu-link i {
   color: #cbd5e1;
-  /* slate-300 */
 }
 
-#nav a:not(:first-child) .flex-col span:last-child {
-  color: #64748b;
-  /* slate-500 */
+/* Enlace activo */
+.active-link {
+  background-color: #1e40af; /* azul activo */
+}
+
+.active-link i,
+.active-link .flex-col span:first-child,
+.active-link .flex-col span:last-child {
+  color: white; /* texto e íconos blancos */
 }
