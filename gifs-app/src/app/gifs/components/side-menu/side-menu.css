@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+/* Menú lateral */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  /* 256px */
+  height: 100vh;
+  background-color: #111827;
+  /* gray-900 */
+  color: #cbd5e1;
+  overflow-y: auto;
+  z-index: 10;
+}

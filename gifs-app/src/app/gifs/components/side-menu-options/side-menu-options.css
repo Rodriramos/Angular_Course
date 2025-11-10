@@ -1,0 +1,78 @@
+:host {
+  display: block;
+}
+
+#nav {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Estilos comunes para cada enlace del menú */
+#nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* space-x-2 */
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  /* py-3 px-2 */
+  border-bottom: 1px solid #334155;
+  /* slate-700 */
+  background-color: #1e40af;
+  /* blue-800 para el primero */
+  transition: background-color 150ms linear;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  /* hover:bg-white/5 */
+}
+
+/* SVG iconos */
+#nav svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+/* Texto principal del enlace */
+#nav a .flex-col span:first-child {
+  font-size: 1.125rem;
+  /* text-lg */
+  font-weight: bold;
+  line-height: 1.25rem;
+  /* leading-5 */
+  color: white;
+}
+
+/* Texto secundario del enlace */
+#nav a .flex-col span:last-child {
+  font-size: 0.875rem;
+  /* text-sm */
+  color: rgba(255, 255, 255, 0.5);
+  /* text-white/50 o slate-500 */
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #nav a .flex-col span:last-child {
+    display: block;
+  }
+}
+
+/* Estilos específicos para enlaces que no tienen fondo azul */
+#nav a:not(:first-child) {
+  background-color: transparent;
+}
+
+#nav a:not(:first-child) .flex-col span:first-child {
+  color: #cbd5e1;
+  /* slate-300 */
+}
+
+#nav a:not(:first-child) .flex-col span:last-child {
+  color: #64748b;
+  /* slate-500 */
+}

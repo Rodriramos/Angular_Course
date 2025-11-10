@@ -1,0 +1,74 @@
+:host {
+  display: block;
+}
+
+/* Logo */
+#logo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#logo h1 {
+  font-size: 1.125rem;
+  /* text-lg */
+  font-weight: bold;
+  color: white;
+}
+
+#logo h1 span {
+  color: #3b82f6;
+  /* blue-500 */
+}
+
+#logo p {
+  color: #64748b;
+  /* slate-500 */
+  font-size: 0.875rem;
+  /* text-sm */
+}
+
+@media (min-width: 768px) {
+  #logo h1 {
+    font-size: 1.5rem;
+    /* text-2xl */
+  }
+}
+
+/* Perfil */
+#profile {
+  padding: 2.5rem 1.5rem;
+  /* py-10 px-6 */
+}
+
+#profile p {
+  color: #64748b;
+  /* slate-500 */
+}
+
+#profile a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* space-x-2 */
+  text-decoration: none;
+}
+
+#profile img {
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+}
+
+#profile span:last-child {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #profile span:last-child {
+    font-size: 1rem;
+  }
+}
