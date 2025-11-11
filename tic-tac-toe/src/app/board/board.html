@@ -1,0 +1,15 @@
+<h1>Current Player: {{ player }}</h1>
+<button (click)="newGame()">Start a new game</button>
+
+
+@if (winner) {
+<p>¡Ganador: {{ winner }}!</p>
+}
+
+<main>
+  <cell 
+    *ngFor="let val of cells; let i = index" 
+    [value]="val" 
+    (click)="makeMove(i)">
+  </cell>
+</main>
