@@ -34,16 +34,16 @@ button.restart {
   margin: 15px;
   padding: 10px 20px;
   font-size: 1.2rem;
-  background-color: #5f43ff; /* verde */
+  background-color: #868686 ; /* verde */
+  border: 1px groove #000000;
   color: #fff;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button.restart:hover {
-  background-color: #5039d1;
+  background-color: #727272;
 }
 
 /* Fondo oscuro semitransparente */
