@@ -1,10 +1,129 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #f8fafc; /* gris claro */
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 main {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-gap: 0;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px; /* fondo oscuro */
+  margin: 0;
 }
 
 cell {
-  border: 1px solid #999;
-  height: 200px;
+  display: block;
 }
+
+div.restart-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button.restart {
+  margin: 15px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #5f43ff; /* verde */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.restart:hover {
+  background-color: #5039d1;
+}
+
+/* Fondo oscuro semitransparente */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caja del pop-up */
+.popup-content {
+  background-color: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.4s ease-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.popup-content h2 {
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  color: #1e293b;
+}
+
+/* Botón ganador */
+.winner-button-x {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #ef4444;
+  color: white;
+}
+
+.winner-button-o {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Símbolo del ganador */
+.winner-symbol {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000000;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Colores dinámicos para X y O */
+.winner-symbol:contains("X") {
+  background-color: #ef4444; /* rojo */
+}
+
+.winner-symbol:contains("O") {
+  background-color: #3b82f6; /* azul */
+}
+

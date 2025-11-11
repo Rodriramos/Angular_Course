@@ -1,15 +1,21 @@
-<h1>Current Player: {{ player }}</h1>
-<button (click)="newGame()">Start a new game</button>
-
-
-@if (winner) {
-<p>¡Ganador: {{ winner }}!</p>
-}
-
+<h1>Tic Tac Toe</h1>
 <main>
-  <cell 
-    *ngFor="let val of cells; let i = index" 
-    [value]="val" 
-    (click)="makeMove(i)">
+  <cell *ngFor="let val of cells; let i = index" [value]="val" (click)="makeMove(i)">
   </cell>
 </main>
+
+@if (winner) {
+<div class="popup">
+  <div class="popup-content">
+    <div>
+      <h2>¡Has ganado!</h2>
+      <button [ngClass]="winner === 'X' ? 'winner-button-x' : 'winner-button-o'">{{ winner }}</button>
+    </div>
+    <button class="restart" (click)="newGame()">Jugar de nuevo</button>
+  </div>
+</div>
+}
+
+  <div class="restart-container">
+    <button (click)="newGame()" class="restart">Start a new game</button>
+  </div>
