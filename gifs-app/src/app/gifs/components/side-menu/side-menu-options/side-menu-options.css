@@ -22,35 +22,26 @@
   transition: background-color 150ms linear;
 }
 
+span {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.25rem;
+  color: #cbd5e1;
+}
+
+span.secondary-text {
+  font-size: 0.875rem;
+  font-weight: normal; /* quita la negrita */
+  color: #64748b;
+  display: block; /* para que aparezca debajo */
+}
+
 /* Hover */
 .menu-link:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Texto principal */
-.menu-link .flex-col span:first-child {
-  font-size: 1.125rem;
-  font-weight: bold;
-  line-height: 1.25rem;
-  color: #cbd5e1;
-  /* gris claro */
-}
-
-/* Texto secundario */
-.menu-link .flex-col span:last-child {
-  font-size: 0.875rem;
-  color: #64748b;
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .menu-link .flex-col span:last-child {
-    display: block;
-  }
-}
-
-/* Íconos */
-.menu-link i {
+i {
   color: #cbd5e1;
   margin-right: 0;
   padding-right: 1rem;

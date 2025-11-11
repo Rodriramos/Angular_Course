@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
+import { GifsService } from "../../../services/gifs.service";
 
 interface GifsSideMenuOptionsInterface {
   label: string;
@@ -16,6 +17,7 @@ interface GifsSideMenuOptionsInterface {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GifsSideMenuOptions {
+  gifService = inject(GifsService);
 
   menuOptions: GifsSideMenuOptionsInterface[] = [
     {
@@ -31,4 +33,8 @@ export class GifsSideMenuOptions {
       router: '/dashboard/search',
     }
   ];
+
+  printKeys(key: string) {
+    console.log(key);
+  }
 }
