@@ -1,10 +1,10 @@
 
-<h2 class="text-2xl font-bold mt-5">Search Gifs</h2>
-<h3 class="text-sm text-gray-500">
+<h2>Search Gifs</h2>
+<h3>
   Search gifs by name, description or tags
 </h3>
 
-<section class="flex flex-col gap-4">
+<section>
   <input
     type="text"
     placeholder="Search Gifs"
@@ -14,5 +14,5 @@
 </section>
 
 <div class="trending-page-layout">
-  <gifs-list class="gif-list" [gifs]="[]"></gifs-list>
+  <gifs-list class="gif-list" [gifs]="gifs()"></gifs-list>
 </div>
