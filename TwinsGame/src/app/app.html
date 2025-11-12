@@ -9,4 +9,17 @@
       </div>
     </div>
   </div>
+
+  @if (victory()) {
+    <div class="popup">
+      <div class="confetti"></div>
+      <div class="popup-content">
+        <h2>Victory!</h2>
+        <button class="restart" (click)="resetGame()">Play again</button>
+      </div>
+    </div>
+  }
+
 </div>
+
+
