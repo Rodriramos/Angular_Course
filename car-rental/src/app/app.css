@@ -1,0 +1,47 @@
+
+.auth-modal {
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.login-link {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  display: inline;
+}
+
+.modal fade {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.modal-dialog {
+  max-width: 375px;
+  width: 100%;
+}
+
+
+.btn-custom {
+  background-color: #ee923b;
+  color: #fff; /* texto blanco */
+  border-radius: 6px;
+  height: 40px;
+}
+
+.btn-custom:hover {
+  background-color: #ee8a2d; /* tono más oscuro al pasar el mouse */
+}
+
